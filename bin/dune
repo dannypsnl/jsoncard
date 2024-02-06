@@ -1,6 +1,9 @@
 (executable
  (public_name jsoncard)
  (name main)
+ (preprocess
+   (pps
+    ppx_deriving.show))
  (libraries jsoncard
             stdio
             jsonm

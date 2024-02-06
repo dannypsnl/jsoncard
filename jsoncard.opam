@@ -12,6 +12,7 @@ bug-reports: "https://github.com/username/reponame/issues"
 depends: [
   "ocaml"
   "dune" {>= "3.13"}
+  "ppx_deriving"
   "stdio"
   "jsonm"
   "yojson"

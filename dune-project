@@ -20,6 +20,7 @@
  (synopsis "A short synopsis")
  (description "A longer description")
  (depends ocaml dune
+          ppx_deriving
           stdio
           jsonm
           yojson)
