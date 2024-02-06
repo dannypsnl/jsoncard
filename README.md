@@ -11,7 +11,7 @@ opam install -y .
 ## Usage
 
 ```shell
-scrapy runspider -a url="https://arxiv.org/abs/..." autocard/arxiv.py -o -:json | jq '.[]' | jsoncard
+scrapy runspider -a url="https://arxiv.org/abs/..." arxiv.py -o -:json | jq '.[]' | jsoncard
 ```
 
 Python
