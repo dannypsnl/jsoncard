@@ -34,7 +34,7 @@ class ArxivSpider(scrapy.Spider):
         title = response.xpath('//h1[@class="title mathjax"]/text()').get()
         authors = response.xpath('//div[@class="authors"]/a/text()').getall()
         doi = response.xpath('//td[@class="tablecell arxivdoi"]/a/text()').get()
-        abstract = response.xpath('//blockquote[@class="abstract mathjax"]/text()').get()
+        abstract = "".join(response.xpath('//blockquote[@class="abstract mathjax"]/text()').getall())
 
         yield {
             'date': dateline,
