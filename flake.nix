@@ -27,7 +27,8 @@
         main = scope'.${package};
         devPackages = builtins.attrValues
           (pkgs.lib.getAttrs (builtins.attrNames devPackagesQuery) scope');
-      in {
+      in
+      {
         legacyPackages = scope';
         packages.default = main;
         devShells.default = pkgs.mkShell {
