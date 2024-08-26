@@ -10,12 +10,7 @@ let extract_list json =
 let author s = "\\author{" ^ s ^ "}"
 
 type arxivcard =
-  | Card of 
-string *
- string * 
- string list * 
-string*
-string
+  | Card of string * string * string list * string * string
   [@printer fun fmt (date, title, authors, doi, abstract) ->
     fprintf fmt "\\date{%s}\n\\title{%s}\n%s\n\\meta{doi}{%s}\n\\p{%s}\n"
     date title (List.map author authors |> String.concat "\n")
